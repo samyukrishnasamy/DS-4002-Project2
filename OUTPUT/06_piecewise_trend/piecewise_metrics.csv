@@ -1,0 +1,2 @@
+selected_knots,num_knots,train_BIC,test_R2,test_MAPE,directional_accuracy_last5
+"(1988, 2003)",2,669.0417312908345,0.9331534637115397,1.9293524436550171,1.0
