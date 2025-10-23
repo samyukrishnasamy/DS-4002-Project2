@@ -10,8 +10,8 @@ This project analyzes annual tuition and required fees for **in-state** and **ou
 Two source files (in-state and out-of-state) from UVA’s Institutional Research & Analytics (IRA) portal were cleaned and merged into a single combined file. A derived feature, `Tuition_Gap`, was created to quantify the difference between out-of-state and in-state tuition for each year.
 
 **Files in this folder**
-- `clean_in_state_tuition.csv` — source data (in-state)
-- `clean_out_state_tuition.csv` — source data (out-of-state)
+- `In_State_UVA_Tuition.csv` — source data (in-state)
+- `Out_Of_State_UVA_tuition.csv` — source data (out-of-state)
 - **`Combined_UVA_Tuition_Cleaned(in).csv` — final combined/cleaned file used for analysis**
 - `tuition_growth_trend.png` — EDA plot (in-state vs out-of-state tuition over time)
 - `tuition_gap_trend.png` — EDA plot (tuition gap over time)
@@ -75,4 +75,7 @@ The widening difference `Tuition_OutState − Tuition_InState` across years.
 
 ---
 
+### Special Note
+This metadata file is regularly updated as the project progresses.  
+It may differ from earlier versions because it reflects the most current data cleaning and analysis steps.
 
