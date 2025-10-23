@@ -1,82 +1,78 @@
 ## Metadata
 
 ### Goal
-This section documents the context, origin, and structure of the UVA Tuition dataset used in this project.  
-It ensures the dataset is transparent, reproducible, and ethically sourced, so others can interpret the analysis correctly.  
-The information below describes how the in-state and out-of-state tuition data were obtained, processed, and combined to create the cleaned dataset used for analysis.
+Document the context, origin, structure, and limitations of the UVA tuition dataset so others can understand, reproduce, and ethically reuse the analysis. This reflects the most current cleaned/combined data used in the project.
 
 ---
 
-### 1. Data Summary
-The dataset contains annual tuition and fee information for both **in-state** and **out-of-state** undergraduate students at the **University of Virginia**.  
-It spans multiple academic years and provides a quantitative basis for analyzing tuition growth and cost disparities between Virginia residents and non-residents.  
+## 1) Data Summary
+This project analyzes annual tuition and required fees for **in-state** and **out-of-state** undergraduate students at the University of Virginia (UVA), spanning multiple academic years.  
+Two source files (in-state and out-of-state) from UVA’s Institutional Research & Analytics (IRA) portal were cleaned and merged into a single combined file. A derived feature, `Tuition_Gap`, was created to quantify the difference between out-of-state and in-state tuition for each year.
 
-After downloading the two datasets from UVA’s Institutional Research & Analytics (IRA) portal, the data were merged and cleaned to produce a single, consistent file.  
-A new variable, `Tuition_Gap`, was created to represent the **difference between out-of-state and in-state tuition** for each academic year.  
-This transformation enables clearer visualization of long-term affordability trends and institutional pricing policies.
-
----
-
-### 2. Provenance
-- **Source:** [UVA Institutional Research & Analytics (IRA)](https://ira.virginia.edu/university-data-home)  
-- **Files Used:**  
-  - `clean_in_state_tuition.csv` (In-state tuition and fees)  
-  - `clean_out_state_tuition.csv` (Out-of-state tuition and fees)  
-- **Access:** Publicly available under UVA’s Open Data Access policy.  
-- **Processing Steps:**  
-  1. Downloaded both datasets directly from the IRA website.  
-  2. Cleaned column names and standardized year formats.  
-  3. Merged the two datasets on matching academic years.  
-  4. Computed `Tuition_Gap = Tuition_OutState - Tuition_InState`.  
-  5. Verified numeric accuracy and removed duplicate records.
+**Files in this folder**
+- `clean_in_state_tuition.csv` — source data (in-state)
+- `clean_out_state_tuition.csv` — source data (out-of-state)
+- **`Combined_UVA_Tuition_Cleaned(in).csv` — final combined/cleaned file used for analysis**
+- `tuition_growth_trend.png` — EDA plot (in-state vs out-of-state tuition over time)
+- `tuition_gap_trend.png` — EDA plot (tuition gap over time)
 
 ---
 
-### 3. License
-The data are publicly available through UVA’s **Open Data Access Policy**.  
-Reuse and analysis for educational or research purposes are permitted with attribution to the University of Virginia’s **Institutional Research & Analytics (IRA)**.
+## 2) Provenance
+- **Source (public):** UVA Institutional Research & Analytics (IRA) – https://ira.virginia.edu/university-data-home  
+- **Acquisition:** Both source CSVs were downloaded from the IRA website.
+- **Processing overview:**
+  1. Standardized column names and year formats in each source file.
+  2. Merged the in-state and out-of-state tables on the matching academic year.
+  3. Computed `Tuition_Gap = Tuition_OutState - Tuition_InState`.
+  4. Removed duplicates and coerced numeric columns where needed.
+- **Reproducibility:** The same steps can be re-run via scripts in the `SCRIPTS` folder to regenerate `Combined_UVA_Tuition_Cleaned(in).csv`.
 
 ---
 
-### 4. Ethical Statements
-This dataset includes only aggregated institutional data and contains **no personally identifiable information (PII)**.  
-All data handling followed UVA’s Responsible Data Use principles.  
-The dataset poses no ethical or privacy concerns.
+## 3) License
+Publicly available institutional data under UVA’s Open Data access policy. Reuse for education/research is permitted with attribution to UVA’s **Institutional Research & Analytics (IRA)**.
 
 ---
 
-### 5. Data Dictionary
+## 4) Ethical Statements
+Data are aggregated at the institutional level and contain **no PII**. Handling follows UVA Responsible Data Use principles. No human subjects involvement.
+
+---
+
+## 5) Data Dictionary (for `Combined_UVA_Tuition_Cleaned(in).csv`)
 
 | Column Name | Description | Type | Example |
-|--------------|-------------|------|----------|
-| `Year_InState` | Academic year corresponding to the in-state tuition record | String | 1970-71 |
-| `Residency_InState` | Residency category for in-state students | String | In-State |
-| `Totals_InState` | Total annual cost (tuition + required fees) for in-state students (USD) | Float | 484 |
-| `Required Fees_InState` | Mandatory annual fees for in-state students (USD) | Float | 154 |
-| `Tuition_InState` | Annual tuition cost for in-state students (USD) | Float | 330 |
-| `Year_Start` | Starting year of the academic period | Integer | 1970 |
-| `Year_OutState` | Academic year corresponding to the out-of-state tuition record | String | 1970-71 |
-| `Residency_OutState` | Residency category for out-of-state students | String | Out-of-State |
-| `Totals_OutState` | Total annual cost (tuition + required fees) for out-of-state students (USD) | Float | 1069 |
-| `Required Fees_OutState` | Mandatory annual fees for out-of-state students (USD) | Float | 154 |
-| `Tuition_OutState` | Annual tuition cost for out-of-state students (USD) | Float | 915 |
-| `Tuition_Gap` | Difference between out-of-state and in-state tuition (USD) | Float | 585 |
+|---|---|---|---|
+| `Year_InState` | Academic year for the in-state record | string | 1970-71 |
+| `Residency_InState` | Residency label for in-state students | string | In-State |
+| `Totals_InState` | Total annual cost (tuition + required fees) for in-state students (USD) | float | 484 |
+| `Required Fees_InState` | Mandatory annual fees for in-state students (USD) | float | 154 |
+| `Tuition_InState` | Annual tuition for in-state students (USD) | float | 330 |
+| `Year_Start` | Start year of the academic period | int | 1970 |
+| `Year_OutState` | Academic year for the out-of-state record | string | 1970-71 |
+| `Residency_OutState` | Residency label for out-of-state students | string | Out-of-State |
+| `Totals_OutState` | Total annual cost (tuition + required fees) for out-of-state students (USD) | float | 1069 |
+| `Required Fees_OutState` | Mandatory annual fees for out-of-state students (USD) | float | 154 |
+| `Tuition_OutState` | Annual tuition for out-of-state students (USD) | float | 915 |
+| `Tuition_Gap` | Difference in tuition (Out-of-State − In-State) in USD | float | 585 |
 
 ---
 
-### Exploratory Plots
+## 6) Explanatory Plots
 
-#### Figure 1. Tuition Growth at the University of Virginia (1970–2024)
-This line plot compares the historical increase in **in-state** and **out-of-state tuition** at UVA.  
-It clearly illustrates how both have risen over time, with a sharper incline for out-of-state tuition, indicating a growing affordability gap.
-
+**Figure 1. Tuition Growth at the University of Virginia (1970–2024)**  
+In-state vs out-of-state tuition over time; illustrates steeper long-run increase for out-of-state.
+  
 ![Tuition Growth Trend](tuition_growth_trend.png)
 
+**Figure 2. Tuition Gap Between Out-of-State and In-State Students (1970–2024)**  
+The widening difference `Tuition_OutState − Tuition_InState` across years.
+  
+![Tuition Gap Trend](tuition_gap_trend.png)
+
 ---
 
-#### Figure 2. Tuition Gap Between Out-of-State and In-State Students (1970–2024)
-This plot shows the **tuition gap** (out-of-state minus in-state tuition) over the same time period.  
-The widening red curve highlights the growing difference in tuition costs between residency types, especially in the past two decades.
-
-![Tuition Gap Trend](tuition_gap_trend.png)
+### Special Note
+This metadata is **living documentation**. If you modify preprocessing (e.g., inflation-adjusted dollars, additional derived features, or school-level splits), update the combined file and revise the dictionary/plots accordingly.
 
