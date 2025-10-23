@@ -64,12 +64,14 @@ Data are aggregated at the institutional level and contain **no PII**. Handling 
 **Figure 1. Tuition Growth at the University of Virginia (1970–2024)**  
 In-state vs out-of-state tuition over time; illustrates steeper long-run increase for out-of-state.
   
-![Tuition Growth Trend](tuition_growth_trend.png)
+<img width="2000" height="1200" alt="tuition_growth_trend" src="https://github.com/user-attachments/assets/dce0129d-b410-47ae-9a40-1ec35ec532a3" />
+
 
 **Figure 2. Tuition Gap Between Out-of-State and In-State Students (1970–2024)**  
 The widening difference `Tuition_OutState − Tuition_InState` across years.
   
-![Tuition Gap Trend](tuition_gap_trend.png)
+<img width="2000" height="1200" alt="tuition_gap_trend" src="https://github.com/user-attachments/assets/f1b9d441-e0fe-4719-b7ad-9bf532f03181" />
+
 
 ---
 
