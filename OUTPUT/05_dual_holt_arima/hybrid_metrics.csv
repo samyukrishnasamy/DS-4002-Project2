@@ -1,2 +1,0 @@
-holt,arima_on_residuals_order,arima_on_residuals_trend,test_R2,test_MAPE,directional_accuracy_last5
-damped add-trend,"(0, 1, 2)",c,0.21847689122504432,6.787395653982693,1.0

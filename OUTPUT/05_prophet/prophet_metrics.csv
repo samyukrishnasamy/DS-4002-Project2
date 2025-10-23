@@ -1,0 +1,2 @@
+train_period,test_period,changepoint_prior_scale,test_R2,test_MAPE,directional_accuracy_last5
+1970–2013,2014–2023,0.05,0.8811366444893709,2.679808014585812,1.0
