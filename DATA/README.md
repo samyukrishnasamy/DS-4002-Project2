@@ -75,6 +75,4 @@ The widening difference `Tuition_OutState − Tuition_InState` across years.
 
 ---
 
-### Special Note
-This metadata is **living documentation**. If you modify preprocessing (e.g., inflation-adjusted dollars, additional derived features, or school-level splits), update the combined file and revise the dictionary/plots accordingly.
 
