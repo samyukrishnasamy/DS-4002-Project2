@@ -32,18 +32,17 @@ Developed in **Python 3.11** using **Jupyter Notebook** for exploration, preproc
 
 ### **Installation**
 Install all dependencies in a virtual environment:
-
-``` bash
-macOS/Linux
-```
+#### macOS/Linux
+``` bash 
 python3 -m venv .venv
 source .venv/bin/activate
-
-``` bash
-Windows (PowerShell)
 ```
+
+#### Windows (PowerShell)
+``` bash
 py -m venv .venv
 .venv\Scripts\Activate.ps1
+```
 
 # Install required packages
 pip install -r requirements.txt
