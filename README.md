@@ -45,8 +45,12 @@ py -m venv .venv
 ```
 
 # Install required packages
-pip install -r requirements.txt
+``` bash pip
+install -r requirements.txt
+```
 
+
+``` bash
 DS-4002-PROJECT2
 ├── DATA/                           # All datasets used in the study
 │   ├── original_dataset/           # Raw UVA tuition data (1970–2024)
@@ -87,6 +91,7 @@ DS-4002-PROJECT2
 │
 ├── requirements.txt                # Python dependencies
 └── .gitignore                      # Ignore unnecessary files
+```
 
 ### **Section 3: Instructions for Reproducing Results (run in this order)**
 ## Reproduction Steps (Run in Order)
