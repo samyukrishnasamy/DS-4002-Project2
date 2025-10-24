@@ -49,7 +49,7 @@ py -m venv .venv
 install -r requirements.txt
 ```
 
-
+# Project Structure
 ``` bash
 DS-4002-PROJECT2
 ├── DATA/                           # All datasets used in the study
