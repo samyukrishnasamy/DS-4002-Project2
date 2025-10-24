@@ -72,6 +72,9 @@ The widening difference `Tuition_OutState − Tuition_InState` across years.
   
 <img width="2000" height="1200" alt="tuition_gap_trend" src="https://github.com/user-attachments/assets/f1b9d441-e0fe-4719-b7ad-9bf532f03181" />
 
+**Figure 3. Distrubution of Tuition Growth at the University of Virginia (1970-2024)**
+The varying distribution of In-State and Out-of-State Tution across years, illustrates widening disparities over time
+![Alt text](OUTPUT/01_exploratory_data_analysis/distribution_of_tuition.png)
 
 ---
 
