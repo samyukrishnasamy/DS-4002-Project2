@@ -44,12 +44,12 @@ py -m venv .venv
 .venv\Scripts\Activate.ps1
 ```
 
-# Install required packages
+### Install required packages
 ``` bash pip
 install -r requirements.txt
 ```
 
-# Project Structure
+# Section 2: Project Structure
 ``` bash
 DS-4002-PROJECT2
 ├── DATA/                           # All datasets used in the study
@@ -93,7 +93,7 @@ DS-4002-PROJECT2
 └── .gitignore                      # Ignore unnecessary files
 ```
 
-### **Section 3: Instructions for Reproducing Results (run in this order)**
+# Section 3: Instructions for Reproducing Results (run in this order)
 ## Reproduction Steps (Run in Order)
 
 ### ** 01_exploratory_data_analysis.ipynb**
